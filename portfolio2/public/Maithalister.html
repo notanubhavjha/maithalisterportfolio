@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Wallpaper</title>
+    <link rel="stylesheet" href="loading.css">
+
+    <link rel="stylesheet" href="maithalister.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="fire2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="circle">
+            <video autoplay muted loop id="circular-video">
+                <source src="Untitled_Project_V1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="big-text">
+            <h1 id="animated-text"></h1>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+    <script src="maithalister.js"></script>
+</body>
+</html>

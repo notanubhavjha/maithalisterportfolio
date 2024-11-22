@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.title-text {
+    font-size: 5rem;
+    color: #b74b4b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-text i {
+    margin-right: 1rem;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0.2rem;
+    background: #b74b4b;
+    left: 50%;
+    margin-left: -0.1rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.timeline-item .timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: #b74b4b;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.timeline-item .timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 2rem;
+    background: #222;
+    color: #fff;
+    border-radius: 0.8rem;
+    text-align: left;
+    box-shadow: 0 0 1rem #b74b4b;
+    transition: box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: -2%;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: calc(52%);
+}
+#WLHC{
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.timeline-item h2 {
+    color: #b74b4b;
+    font-size: large;
+}
+.timeline-item p{
+    font-size: 1rem;
+}
+
+.timeline-item:hover .timeline-content {
+    box-shadow: 0 0 2rem #b74b4b;
+}
+
+/* Back to Home button */
+.button-container {
+    margin-top: 4rem;
+}
+
+.back-to-home-button {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border: 0.2rem solid #b74b4b;
+    border-radius: 2rem;
+    color: #b74b4b;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.back-to-home-button:hover {
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 1rem #b74b4b;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments for timeline */
+@media (max-width: 768px) {
+    .timeline-item .timeline-content {
+        width: 90%;
+        left: 5% !important;
+    }
+
+    .timeline-item .timeline-dot {
+        left: calc(50% - 1rem);
+    }
+}

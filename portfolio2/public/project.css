@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+.filter-bar {
+    text-align: center;
+    margin: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.filter-btn {
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: white;
+    transition: 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.filter-btn:hover {
+    background-color: #b74b4b;
+    color: black;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.project-item {
+    position: relative;
+    margin: 1rem;
+    width: 30rem;
+    height: 20rem;
+    overflow: hidden;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+.hover-description {
+    position: absolute;
+    bottom: 0;
+    background: rgb(195, 68, 68);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(1rem);
+}
+
+.project-item:hover .hover-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments for gallery */
+@media (max-width: 768px) {
+    .gallery {
+        display: block;
+        padding: 1rem;
+    }
+
+    .project-item {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .project-item {
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project-item {
+        width: 30rem;
+        height: 20rem;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 50%;
+    }
+
+    .filter-bar {
+        text-align: center;
+        margin: 1rem;
+    }
+
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        margin: 0.3rem;
+        font-size: 1.4rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+.title-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.glow-text {
+    font-size: 5rem;
+    color: #b74b4b;
+   
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+}
+
+.icon-project {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 0.6em; /* Adjust size as needed */
+    color: #b74b4b;
+    text-shadow: none; /* Remove glow from icon */
+}
+
+.glow-text:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 2rem #b74b4b, 0 0 3rem #b74b4b, 0 0 4rem #b74b4b, 0 0 5rem #b74b4b;
+}

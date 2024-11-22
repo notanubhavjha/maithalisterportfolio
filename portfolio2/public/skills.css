@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+.skills-container {
+    margin: auto;
+    background-color: #000000;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1.4rem rgb(190, 81, 81);
+    max-width: 80rem;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    color: #b74a4a;
+    margin-bottom: 2rem;
+    font-size: 2.4rem; /* Increased font size */
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    display: inline-block;
+    background-color: black;
+    color: #b74b4b;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border: 0.2rem solid #b74b4b;
+    border-radius: 2.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.6rem; /* Increased font size */
+    cursor: pointer;
+}
+
+.skills-list li i {
+    margin-right: 10px;
+}
+
+.skills-list li:hover {
+    transform: scale(1.1);
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 2.5rem #b74b4b;
+}
+
+
+
+.button-container {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+
+.back-to-home-button {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border: 0.2rem solid #b74b4b;
+    border-radius: 2rem;
+    color: #b74b4b;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    
+}
+
+.back-to-home-button:hover {
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 1rem #b74b4b;
+}
+/* Responsive Design */
+@media(max-width:995px){
+    .nav-links {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 0.3rem solid #b74b4b;
+        border-bottom: 0.3rem solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+}
